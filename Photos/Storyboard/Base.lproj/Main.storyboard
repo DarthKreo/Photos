@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Gallery-->
         <scene sceneID="lR8-7q-H1M">
             <objects>
-                <viewController id="Hr2-h5-xRd" sceneMemberID="viewController">
+                <viewController id="Hr2-h5-xRd" customClass="MainViewController" customModule="Photos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Bdk-xt-omf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -57,15 +57,20 @@
                             <constraint firstItem="7gW-05-jik" firstAttribute="trailing" secondItem="DzC-ZO-Tae" secondAttribute="trailing" id="ukN-ro-HrB"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="4eY-CR-xuT">
+                    <navigationItem key="navigationItem" title="Gallery" id="4eY-CR-xuT">
                         <barButtonItem key="rightBarButtonItem" title="Item" id="p4e-yT-srt"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="changePresentButton" destination="p4e-yT-srt" id="Muq-aE-Nr0"/>
+                        <outlet property="galleryCollection" destination="LLF-u5-TRa" id="FEy-xF-sLu"/>
+                        <outlet property="searchBar" destination="7gW-05-jik" id="JuR-J0-vIp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hki-3Q-VGW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="649.27536231884062" y="24.776785714285712"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail-->
         <scene sceneID="G2F-ew-O8X">
             <objects>
                 <viewController id="6xc-xX-f36" sceneMemberID="viewController">
@@ -75,7 +80,7 @@
                         <viewLayoutGuide key="safeArea" id="Pln-F2-flU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="RM9-5c-Wfw"/>
+                    <navigationItem key="navigationItem" title="Detail" id="RM9-5c-Wfw"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nTb-Tb-bK2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
